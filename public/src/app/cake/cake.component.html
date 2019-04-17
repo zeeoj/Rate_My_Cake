@@ -1,0 +1,28 @@
+<!--<p>-->
+<!--  {{currentCake.baker}}-->
+<!--  {{currentCake.ratings}}-->
+<!--</p>-->
+<div class="offset-sm-3 " *ngIf="currentCake.id!=='' " >
+  <div class="card mb-3 " style="max-width: 540px;" >
+    <div class="row no-gutters display-inline">
+      <div class="col-md-4">
+        <img  src="{{currentCake.url}}" class="card-img">
+      </div>
+      <div class="col-md-8" >
+        <div class="card-body" >
+
+          <h5 class="card-title">Baker: {{currentCake.baker}} </h5>
+            <h5 >AverageRating: {{currentCake.avgRating}}  </h5>
+
+
+
+          <div *ngFor= 'let rating of currentCake.ratings'>
+
+           <p>Stars:{{rating.stars}}</p>
+          <p>Comment:{{rating.comment}}</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
